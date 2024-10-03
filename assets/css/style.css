@@ -1,0 +1,134 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-direction: column;
+}
+.box{
+    position: relative;
+    width: 250px;
+    height: 50px;
+    background: #1d3244;
+} */
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    perspective: 1000px;
+    display: flex;
+    gap: 24px;
+}
+
+.profile-card {
+
+    width: 250px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.parent:hover .profile-card {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button.theme-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.theme-button:hover {
+    background-color: #e67e22;
+}
+
+
+.button {
+    margin-top: 35px;
+
+}
+
+.next-btn {
+    width: 173px;
+    height: 63px;
+    border-radius: 56px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: rgb(36, 184, 213) !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+
+}
+
+.next-btn:hover {
+    -webkit-box-shadow: inset 15px 12px 114px 9px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: inset 15px 12px 114px 9px rgba(0, 0, 0, 0.68);
+    box-shadow: inset 15px 12px 114px 9px rgba(0, 0, 0, 0.68);
+}
